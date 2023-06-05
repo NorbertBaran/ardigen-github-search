@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #503a92;
+    --secondary-color: #e35c98;
+    --primary-accent: #1284c2;
+    --secondary-accent: #20b8ad;
+    --primary-header: #3C246B;
+    --secondary-header: #fff;
+    --primary-text: #212121;
+    --secondary-text: #757575;
+    --border: #BDBDBD;
+
+    --max-width: 1150px;
+    --input-radius: 5px;
+    --regular-padding: 8px;
+
+    --regular-font: 14px;
+    --big-font: 18px;
+    --header-font: 24px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-size: var(--regular-font);
+    color: var(--primary-text);
+}
+
+div.navbar {
+    background: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+div.toolbar {
+    position: relative;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+div.toolbar > img {
+    position: absolute;
+    top: 14px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 135px;
+}
+
+div.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 90px;
+}
+
+div.header > img {
+    width: var(--header-font);
+    height: var(--header-font);
+}
+
+div.header > h1 {
+    font-size: var(--header-font);
+    color: var(--secondary-header);
+}
+
+div.content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+div.search {
+    padding-top: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: 1px solid var(--border);
+    border-radius: var(--input-radius);
+    padding: var(--regular-padding);
+    width: 250px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    padding: calc(var(--regular-padding) - 1px);
+}
+
+input.full {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background: var(--primary-color);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--input-radius);
+    padding: var(--regular-padding);
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--secondary-header);
+    min-width: 100px;
+}
+
+button:hover {
+    background: var(--secondary-color);
+}
+
+
+div.list {
+    padding: 40px 0;
+}
+
+div.list > div.repository:first-child {
+    border-top: 1px solid var(--border);
+}
+
+div.list > div.repository {
+    padding: 26px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+}
+
+div.list div.title {
+    font-size: var(--big-font);
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--primary-header);
+    margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 750px) {
+    div.list div.title {
+        min-width: 500px;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 750px) {
+    div.list div.title {
+        min-width: 300px;
+    }
+}
+
+div.list div.repository div.info {
+    color: var(--secondary-text);
+    font-weight: 300;
+    position: relative;
+    display: flex;
+    gap: 15px;
+}
+
+div.list div.repository div.language {
+    margin-left: 15px;
+}
+
+div.list div.repository div.language:before {
+    content: "";
+    position: absolute;
+    background: var(--secondary-color);
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 0;
+    border-radius: 50%;
+}
+
+div.commit-time {
+    min-width: 150px;
+}
+
+div.statistics {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+div.forks,
+div.stars {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+div.forks > img,
+div.stars > img {
+    width: var(--regular-font);
+    height: var(--regular-font);
+}
+
+
+
+
+div.list > div.repository > div.statistics > div.comments {
+
+}
+
+div.list > div.repository > div.statistics > div.commits {
+
+}
+
+div.total-statistics {
+
+}
+
+div.total-statistics > div.stars {
+
+}
+
+div.total-statistics > div.comments {
+
+}
+
+div.total-statistics > div.commits {
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700,900&display=swap"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Ardigen - GitHub Search</title>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="toolbar">
+            <img src="assets/ardigen.png" alt="ardigen"/>
+            <div class="header">
+                <img src="assets/github.svg" alt="github"/>
+                <h1>GitHub Search</h1>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="search">
+            <input id="username" class="full" type="text" placeholder="username">
+            <button id="find">FIND</button>
+        </div>
+        <div id="repositories" class="list"></div>
+    </div>
+</body>
+</html>
