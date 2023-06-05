@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  github-search-api-app:
+    container_name: github-search-api-app
+    build:
+      context: ./github-search-api
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - github-search
+  
+  github-search-app:
+    container_name: github-search-app
+    build:
+      context: ./github-search
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    networks:
+      - github-search
+    depends_on:
+      - github-search-api-app
+
+networks:
+  github-search:
