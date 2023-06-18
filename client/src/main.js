@@ -1,3 +1,7 @@
+import {API} from "./config/config"
+import fork from "./assets/fork.svg"
+import star from "./assets/star.svg"
+
 const generate_repository_html = repository_data => `
     <div class="repository">
         <div>
@@ -9,11 +13,11 @@ const generate_repository_html = repository_data => `
         </div>
         <div class="statistics">
             <div class="forks">
-                <img src="./fork.svg" alt="fork"/>
+                <img src="${fork}" alt="fork"/>
                 ${repository_data.forks_count}
             </div>
             <div class="stars">
-                <img src="./star.svg" alt="star"/>
+                <img src="${star}" alt="star"/>
                 ${repository_data.stargazers_count}
             </div>
         </div>
@@ -22,8 +26,7 @@ const generate_repository_html = repository_data => `
 
 const user_repositories = async () => {
     const username = document.getElementById("username").value
-    const url = `http://localhost:3000/users/${username}/repos`
-    const response = await fetch(url, {
+    const response = await fetch(`${API}/users/${username}/repos`, {
         method: "GET",
         headers: {"Content-Type": "application/json",}
     })

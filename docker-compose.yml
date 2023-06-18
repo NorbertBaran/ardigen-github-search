@@ -1,27 +1,31 @@
 version: '3'
 services:
 
-  github-search-api-app:
-    container_name: github-search-api-app
+  ardigen-github-search-api:
+    image: ardigen-github-search-api
+    container_name: ardigen-github-search-api
     build:
-      context: ./github-search-api
+      context: api
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - ${ARDIGEN_GITHUB_SEARC_API_PORT}:3000
     networks:
-      - github-search
+      - ardigen-github-search
   
-  github-search-app:
-    container_name: github-search-app
+  ardigen-github-search-client:
+    image: ardigen-github-search-client
+    container_name: ardigen-github-search-client
     build:
-      context: ./github-search
+      context: client
+      args:
+        - CONFIG=${ARDIGEN_GITHUB_SEARC_CLIENT_CONFIG}
       dockerfile: Dockerfile
     ports:
-      - 80:80
+      - ${ARDIGEN_GITHUB_SEARC_CLIENT_PORT}:80
     networks:
-      - github-search
+      - ardigen-github-search
     depends_on:
-      - github-search-api-app
+      - ardigen-github-search-api
 
 networks:
-  github-search:
+  ardigen-github-search:

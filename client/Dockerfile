@@ -1,6 +1,9 @@
 FROM node:18.16.0-alpine as build
 WORKDIR /app
-COPY . /app
+COPY . .
+RUN rm -r src/config
+ARG CONFIG
+COPY ${CONFIG} src/config/config.js
 RUN yarn install
 RUN yarn build
 
