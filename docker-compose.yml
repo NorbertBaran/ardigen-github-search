@@ -29,3 +29,5 @@ services:
 
 networks:
   ardigen-github-search:
+    name: ardigen-github-search
+    driver: bridge

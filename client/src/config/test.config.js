@@ -1,0 +1,1 @@
+export const API='http://localhost/ardigen-github-search/api'
