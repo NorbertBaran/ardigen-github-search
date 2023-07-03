@@ -1,7 +1,7 @@
 # Ardigen GitHub Search - recruitment task
 
 ### Production:
-Ardigen GitHub Search live preview available [here](http://3.68.78.96/ardigen-github-search).\
+Ardigen GitHub Search live preview available [here](http://quecto.pl/ardigen-github-search).\
 Deployed on Amazon Web Services.
 
 ### Versions:
