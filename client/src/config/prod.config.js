@@ -1,1 +1,1 @@
-export const API='http://3.68.78.96/ardigen-github-search/api'
+export const API='http://quecto.pl/ardigen-github-search/api'
